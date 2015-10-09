@@ -32,8 +32,8 @@ The following should be startup projects:
 * Saga returns response to caller.  
 
 ## Observed locally for full request/response cycle:
-Rabbit : < 200ms
-MSMQ : 300-350 ms
-SQL : 1500 - 3500 ms
-Azure Queues : 4500 - 6000 ms
+* Rabbit : < 200ms
+* MSMQ : 300-350 ms
+* SQL : 1500 - 3500 ms
+* Azure Queues : 4500 - 6000 ms
 	
