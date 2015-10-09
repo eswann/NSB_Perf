@@ -18,7 +18,22 @@
 
 ## Fire up the solution.  
 The following should be startup projects:
-* Q2.Command.Harness
-* Q2.Oao.Application.Command.Port
-* Q2.Oao.Identity.Port
+* Q2.Command.Harness (Console app to kick off commands)
+* Q2.Oao.Application.Command.Port (Processes Application commands)
+* Q2.Oao.Identity.Port (Processes User/Identity commands)
+
+## Scenario
+* Client (Q2.Command.Harness) makes request/response with port.  
+* Port starts saga with two commands (StartApplicationSaga).
+* Commands are processed in parallel.
+	* StartApplication (Handled by Q2.Oao.Application.Command.Port)
+	* CreateUser (Handled by Q2.Oao.Identity.Port)
+	* Logic of each handler has been removed and replaced with a Task.Delay of 100 ms.
+* Saga returns response to caller.  
+
+## Observed locally for full request/response cycle:
+Rabbit : < 200ms
+MSMQ : 300-350 ms
+SQL : 1500 - 3500 ms
+Azure Queues : 4500 - 6000 ms
 	
