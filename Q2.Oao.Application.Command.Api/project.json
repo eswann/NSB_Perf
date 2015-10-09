@@ -1,0 +1,52 @@
+{
+	"webroot": "wwwroot",
+	"version": "1.0.0-*",
+
+    "dependencies": {
+        "Autofac": "4.0.0-beta7-130",
+        "Autofac.Framework.DependencyInjection": "4.0.0-beta7-130",
+        "FluentValidation": "5.6.2",
+        "Microsoft.AspNet.Cors": "1.0.0-beta7",
+        "Microsoft.AspNet.Hosting": "1.0.0-beta7",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta7",
+        "Microsoft.AspNet.Owin": "1.0.0-beta7",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta7",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta7",
+        "Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+        "Microsoft.Owin": "3.0.1",
+        "NServiceBus": "5.2.6",
+        "NServiceBus.Autofac": "5.2.5-beta7",
+        "NServiceBus.Serilog": "2.0.1.1",
+        "Serilog.Framework.Logging": "1.0.0-beta7-10052",
+        "Serilog.Sinks.Seq": "1.5.17",
+        "Q2.Oao.Application.Messages": "1.0.0-*",
+        "Q2.Library.Common": "1.0.0-*",
+        "Q2.Oao.Library.Common": "1.0.0-*",
+        "Q2.Oao.Library.Validation": "1.0.0-*",
+        "Q2.Oao.Library.ServiceBus": "1.0.0-*",
+        "Q2.Oao.Library.Identity": "1.0.0-*",
+        "Q2.Oao.Library.Api": "1.0.0-*"
+    },
+
+	"commands": {
+		"web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+	},
+
+	"frameworks": {
+		"dnx451": {
+		}
+	},
+
+	"exclude": [
+		"wwwroot",
+		"node_modules",
+		"bower_components"
+	],
+	"publishExclude": [
+		"node_modules",
+		"bower_components",
+		"**.xproj",
+		"**.user",
+		"**.vspscc"
+	]
+}

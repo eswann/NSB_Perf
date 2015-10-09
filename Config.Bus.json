@@ -1,0 +1,22 @@
+{
+	"Data": {
+		"ServiceBusType": "azure",
+
+		"ServiceBusDb": {
+			"ConnectionString": "Server=(local)\\SqlExpress;Database=Q2_ServiceBus;Trusted_Connection=True;"
+		},
+
+		"sqlTransport": {
+			"ConnectionString": "Server=(local)\\SqlExpress;Database=Q2_ServiceBus;Trusted_Connection=True;"
+		},
+		"azureTransport": {
+			"ConnectionString": "UseDevelopmentStorage=true"
+		},
+		"msmqTransport": {
+			"ConnectionString": "deadLetter=true;journal=true;useTransactionalQueues=true;cacheSendConnection=true"
+		},
+		"rabbitTransport": {
+			"ConnectionString": "host=localhost;prefetchcount=5"
+		}
+	}
+}

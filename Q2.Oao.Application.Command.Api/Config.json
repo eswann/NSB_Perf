@@ -1,0 +1,29 @@
+﻿{
+	"AppSettings": {
+		"LogSettings": { "EndpointUri": "http://localhost:5341" },
+		"CorsOrigins": "http://localhost:9000",
+		"IdentityServerAuthority": "http://localhost:35927/",
+
+		"ServiceSettings": {
+			"ServiceName": "Q2.Oao.Application.Command.Api",
+			"EncryptionKey": "e60c8e79dac24a91a405508f7be74a97"
+		},
+		"IdentityServerSettings": {
+			"EndpointUri": "http://localhost:35927/connect/token",
+			"ClientId": "Q2.Oao.Application.Command.Api",
+			"Secret": "secret"
+		}
+	},
+
+	"Data": {
+		"ServiceBusDb": {
+			"ConnectionString": "Server=(local)\\SqlExpress;Database=Q2_ServiceBus;Trusted_Connection=True;"
+		},
+		"ServiceBusTransport": {
+			"ConnectionString": "host=localhost"
+		}
+	}
+
+
+
+}

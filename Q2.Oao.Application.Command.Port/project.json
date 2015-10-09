@@ -1,0 +1,37 @@
+{
+	"version": "1.0.0-*",
+	"description": "",
+	"authors": [ "" ],
+	"tags": [ "" ],
+	"projectUrl": "",
+	"licenseUrl": "",
+
+    "dependencies": {
+        "Autofac": "4.0.0-beta7-130",
+        "FluentValidation": "5.6.2",
+        "Microsoft.Framework.Configuration.Binder": "1.0.0-beta7",
+        "Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta7",
+        "Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+        "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-beta7",
+        "NServiceBus": "5.2.6",
+        "NServiceBus.Serilog": "2.0.1.1",
+        "Serilog.Framework.Logging": "1.0.0-beta7-10052",
+        "Q2.Oao.Application.Messages": "1.0.0-*",
+        "Q2.Oao.Identity.Messages": "1.0.0-*",
+        "Q2.Library.ServiceHost": "1.0.0-*",
+        "Q2.Oao.Library.Common": "1.0.0-*",
+        "Q2.Oao.Library.ServiceBus": "1.0.0-*"
+    },
+
+	"commands": {
+		"service": "Q2.Oao.Application.Command.Port"
+	},
+
+	"frameworks": {
+		"dnx451": {
+			"frameworkAssemblies": {
+				"System.ServiceProcess": "4.0.0.0"
+			}
+		}
+	}
+}

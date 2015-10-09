@@ -1,0 +1,17 @@
+{
+	"version": "1.0.0-*",
+	"description": "Messages used in the Q2 OAO Application bounded context.",
+	"authors": [ "Q2 OAO Team" ],
+	"tags": [ "" ],
+	"projectUrl": "",
+	"licenseUrl": "",
+
+    "dependencies": {
+        "NServiceBus": "5.2.6",
+        "Q2.Oao.Library.Common": "1.0.0-*"
+    },
+
+  "frameworks" : {
+    "dnx451": { }
+  }
+}

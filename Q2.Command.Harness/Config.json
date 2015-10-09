@@ -1,0 +1,8 @@
+﻿{
+	"AppSettings": {
+		"ServiceSettings": {
+			"ServiceName": "NsbPerf.Command.Harness",
+			"EncryptionKey": "gdDbqRpQdRbTs3mhdZh9qCaDaxJXl+e6"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"version": "1.0.0-*",
+	"description": "Common functionality for any Q2 .Net project",
+	"authors": [ "Q2 Oao Team" ],
+	"tags": [ "" ],
+	"projectUrl": "",
+	"licenseUrl": "",
+
+	"dependencies": {
+		"Autofac": "4.0.0-beta7-130",
+		"Autofac.Framework.DependencyInjection": "4.0.0-beta7-130",
+		"Microsoft.Framework.Configuration.Binder": "1.0.0-beta7",
+		"Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta7",
+		"Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+		"Microsoft.Framework.DependencyInjection": "1.0.0-beta7",
+		"Microsoft.Dnx.Runtime.Abstractions": "1.0.0-beta7",
+		"Serilog.Framework.Logging": "1.0.0-beta7-10052",
+
+		"Q2.Oao.Library.Common": "1.0.0-*"
+	},
+
+	"frameworks": {
+		"dnx451": {
+			"frameworkAssemblies": {
+				"System.ServiceProcess": "4.0.0.0"
+			}
+		}
+	}
+}

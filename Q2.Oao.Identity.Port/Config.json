@@ -1,0 +1,8 @@
+﻿{
+	"AppSettings": {
+		"ServiceSettings": {
+			"ServiceName": "NsbPerf.Identity.Port",
+			"EncryptionKey": "gdDbqRpQdRbTs3mhdZh9qCaDaxJXl+e6"
+		}
+	}
+}

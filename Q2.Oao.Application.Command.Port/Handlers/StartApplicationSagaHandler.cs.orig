@@ -1,0 +1,85 @@
+﻿using NServiceBus;
+using NServiceBus.Saga;
+using Q2.Oao.Command.Service.Sagas;
+using Q2.Oao.Command.Service.ServiceBus;
+using Q2.Oao.Messages.Commands;
+using Q2.Oao.Messages.Responses;
+
+namespace Q2.Oao.Command.Service.Handlers
+{
+	public class StartApplicationSagaHandler : Saga<StartApplicationSagaData>,
+										IAmStartedByMessages<StartApplicationSaga>,
+										IHandleMessages<StartApplicationResponse>,
+										IHandleMessages<CreateUserResponse>
+	{
+		public StartApplicationSagaHandler(IBus bus)
+		{
+			Bus = bus;
+		}
+
+		protected override void ConfigureHowToFindSaga(SagaPropertyMapper<StartApplicationSagaData> mapper)
+		{
+		}
+
+		public void Handle(StartApplicationSaga message)
+		{
+			var startCommand = new StartApplication
+			{
+				CorrelationId = message.CorrelationId,
+<<<<<<< HEAD
+				Email = message.Email,
+				FirstName = message.FirstName,
+				LastName = message.LastName
+=======
+				ApplicantEmail = Data.Email,
+				ApplicantFirstName = Data.FirstName,
+				ApplicantLastName = Data.LastName
+>>>>>>> 9b704893c8fd81d2c28a36cd2b1941b105f6e36b
+			};
+			Bus.Send(startCommand);
+
+			var createUserCommand = new CreateUser
+			{
+				CorrelationId = message.CorrelationId,
+				Email = message.Email,
+				Password = message.Password
+			};
+			Bus.Send(createUserCommand);
+		}
+
+		public void Handle(StartApplicationResponse message)
+		{
+			Data.ApplicationId = message.ApplicationId;
+			Data.StartAppCompleted = true;
+
+			ProcessResponse(message);
+		}
+
+		public void Handle(CreateUserResponse message)
+		{
+			Data.UserId = message.UserId;
+			Data.CreateUserCompleted = true;
+			ProcessResponse(message);
+		}
+
+		private void ProcessResponse(ResponseBase message)
+		{
+			if (Data.SagaCompleted || message.HasErrors)
+			{
+				var response = new StartApplicationSagaResponse
+				{
+					CorrelationId = message.CorrelationId,
+					ApplicationId = Data.ApplicationId.GetValueOrDefault(),
+					UserId = Data.UserId,
+					Exceptions = message.Exceptions,
+					Actions = message.Actions
+				};
+
+				ReplyToOriginator(response);
+
+				if(Data.SagaCompleted)
+					MarkAsComplete();
+			}
+		}
+	}
+}

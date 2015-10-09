@@ -1,0 +1,33 @@
+{
+	"version": "1.0.0-*",
+	"description": "Common service bus setup for Oao projects",
+	"authors": [ "Q2 Oao Team" ],
+	"tags": [ "" ],
+	"projectUrl": "",
+	"licenseUrl": "",
+
+    "dependencies": {
+        "Autofac": "4.0.0-beta7-130",
+        "Microsoft.Framework.Configuration": "1.0.0-beta7",
+        "Microsoft.Framework.Configuration.Binder": "1.0.0-beta7",
+        "Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta7",
+		"Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+		"Serilog.Framework.Logging": "1.0.0-beta7-10052",
+        "NServiceBus": "5.2.6",
+        "NServiceBus.Autofac": "5.2.5-beta7",
+        "NServiceBus.NHibernate": "6.2.2",
+        "NServiceBus.Serilog": "2.0.1.1",
+		"NServiceBus.RabbitMQ": "3.0.0",
+		"NServiceBus.SqlServer": "2.2.0",
+		"NServiceBus.Azure.Transports.WindowsAzureStorageQueues": "6.2.1",
+        "Q2.Oao.Library.Common": "1.0.0-*"
+    },
+
+	"frameworks": {
+		"dnx451": {
+			"frameworkAssemblies": {
+				"System.Configuration": "4.0.0.0"
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"version": "1.0.0-*",
+	"description": "Common functionality for any Oao project",
+	"authors": [ "Q2 Oao Team" ],
+	"tags": [ "" ],
+	"projectUrl": "",
+	"licenseUrl": "",
+
+	"dependencies": {
+		"Microsoft.Framework.Configuration": "1.0.0-beta7",
+		"Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+		"Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta7",
+		"Microsoft.Dnx.Runtime.Abstractions": "1.0.0-beta7",
+
+		"FluentValidation": "5.6.2"
+	},
+
+	"frameworks": {
+		"dnx451": {
+			"frameworkAssemblies": {
+				"System.ComponentModel.DataAnnotations": "4.0.0.0"
+			}
+		}
+	}
+}
