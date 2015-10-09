@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Reflection;
 using Autofac;
 using Microsoft.Framework.Configuration;
@@ -20,6 +21,10 @@ namespace Q2.Oao.Library.ServiceBus
 
 		public BusManager(ILifetimeScope lifetimeScope, IConfigurationRoot configuration)
 		{
+			ServicePointManager.UseNagleAlgorithm = false;
+			ServicePointManager.Expect100Continue = false;
+			ServicePointManager.DefaultConnectionLimit = 500;
+
 			IConfigurationSection serviceSettingsConfig = configuration.GetSection("AppSettings:ServiceSettings");
 			serviceSettingsConfig.Bind(_serviceSettings);
 

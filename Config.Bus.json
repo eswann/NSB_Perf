@@ -1,6 +1,6 @@
 {
 	"Data": {
-		"ServiceBusType": "azure",
+		"ServiceBusType": "msmq",
 
 		"ServiceBusDb": {
 			"ConnectionString": "Server=(local)\\SqlExpress;Database=Q2_ServiceBus;Trusted_Connection=True;"
