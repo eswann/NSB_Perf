@@ -13,7 +13,7 @@
 * Open solution in VS 2015. 
 * Open the solution explorer tree in VS 2015
 * Inside of the "Solution Items" folder, open the Config.Bus.json
-* Make sure valid connection strings are present for sql, rabbit, azure, and msmq transport connection strings.
+* Make sure valid connection strings are present for sql, rabbit, azure, and msmq transports.
 * To switch the transport to use, set the ServiceBusType to either rabbit, sql, azure, or msmq
 
 ## Fire up the solution.  
